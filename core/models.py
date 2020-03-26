@@ -1,5 +1,6 @@
 from django.db import models
 from atracoes.models import Atracao
+from comentarios.models import Comentario
 
 
 class PontoTuristico(models.Model):
@@ -7,6 +8,7 @@ class PontoTuristico(models.Model):
     descrição = models.TextField('descrição')
     aprovado = models.BooleanField('aprovado')
     atracao = models.ManyToManyField(Atracao)
+    comentario = models.ManyToManyField(Comentario)
 
     def __str__(self):
         return self.nome
