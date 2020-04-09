@@ -6,7 +6,7 @@ from comentarios.api.viewset import ComentarioViewset
 from avaliacoes.api.viewset import AvaliacaoViewset
 
 router = routers.DefaultRouter()
-router.register('pontos_turisticos', PontosTuristicosViewSet)
+router.register('pontos_turisticos', PontosTuristicosViewSet, basename='PontoTuristico')
 router.register('atracoes', AtracoeViewSet)
 router.register('enderecos', EnderecoViewset)
 router.register('comentarios', ComentarioViewset)
